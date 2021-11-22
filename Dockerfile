@@ -7,4 +7,5 @@ RUN case "$(arch)" in x86_64) release_arch=amd64 ;; i386) release_arch=386 ;; aa
 RUN chmod 755 /grpc_health_probe
 FROM scratch
 COPY --from=build /grpc_health_probe /
-ENTRYPOINT /grpc_health_probe
+ENTRYPOINT [ "/grpc_health_probe" ]
+CMD [ "-help" ]
