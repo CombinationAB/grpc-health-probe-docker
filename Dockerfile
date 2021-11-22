@@ -8,4 +8,5 @@ RUN chmod 755 /grpc_health_probe
 FROM scratch
 COPY --from=build /grpc_health_probe /
 ENTRYPOINT [ "/grpc_health_probe" ]
+LABEL org.opencontainers.image.source=https://github.com/CombinationAB/grpc-health-probe-docker
 CMD [ "-help" ]
