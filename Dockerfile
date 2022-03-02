@@ -1,5 +1,5 @@
-ARG version=0.4.6
-FROM alpine:3.14 as build
+ARG version=0.4.8
+FROM alpine:3 as build
 ARG version
 RUN apk --no-cache add curl
 RUN case "$(arch)" in x86_64) release_arch=amd64 ;; i386) release_arch=386 ;; aarch64) release_arch=arm64 ;; arm*) release_arch=arm;; *) release_arch=$(arch);; esac && \
