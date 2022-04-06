@@ -1,4 +1,4 @@
-ARG version=0.4.8
+ARG version=0.4.9
 FROM alpine:3 as build
 ARG version
 RUN apk --no-cache add curl
